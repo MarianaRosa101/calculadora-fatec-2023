@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{
+            background-color: #2c3e50;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input[type="number"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #34495e;
+            color: #fff;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        span {
+            font-weight: bold;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora Básica</h1>
+    <form>
+        <input id="n1" type="number" /><br />
+        <br />
+        <input id="n2" type="number" /><br />
+        <br /><br />
+
+        <button type="button" onclick="somar()">Somar</button>
+        <button type="button" onclick="subtrair()">Subtrair</button>    
+        <button type="button" onclick="multiplicar()">Multiplicar</button>
+        <button type="button" onclick="dividir()">Dividir</button>
+        <br /><br />
+        O resultado é <span></span>
+    </form>
+    <script>
+        var n1 = document.querySelector("#n1");
+        var n2 = document.querySelector("#n2");
+        var resultado = document.querySelector("span");
+
+            document.getElementById("resp").value = resp;
+        function somar(){
+            resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value);
+        }
+        function subtrair(){
+            resultado.innerHTML = parseInt(n1.value) - parseInt(n2.value);
+        }
+        function multiplicar(){
+            resultado.innerHTML = parseInt(n1.value) * parseInt(n2.value);
+        }
+        function dividir(){
+            resultado.innerHTML = parseInt(n1.value) / parseInt(n2.value);
+        }
+    </script>
+</body>
+</html>
